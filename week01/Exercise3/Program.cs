@@ -6,7 +6,7 @@ class Program
     {
         Random randomGenerator = new Random();
 
-        int magicNumber = randomGenerator.Next(1, 11);
+        int magicNumber = randomGenerator.Next(1, 101);
         int inputNumber;
         int guessCount = 0;
 
@@ -36,7 +36,7 @@ class Program
                     break;
                 }
 
-                magicNumber = randomGenerator.Next(1, 11);
+                magicNumber = randomGenerator.Next(1, 101);
                 guessCount = 0;
             }
         }
