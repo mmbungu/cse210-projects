@@ -30,7 +30,7 @@ public class Reference
         string text = $"{_book} {_chapter}:{_verse}";
         if(_endVerse != 0)
         {
-            text += $":{_endVerse}";
+            text += $"-{_endVerse}";
         }
         return text;
     }
