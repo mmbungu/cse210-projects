@@ -12,12 +12,17 @@ public class Video
         Console.WriteLine("-----------------------------\n");
         Console.WriteLine($"Title: {_title}");
         Console.WriteLine($"Author: {_author}");
-        Console.WriteLine($"Length: {_length}");
-        Console.WriteLine($"Comments: {_comments.Count}");
+        Console.WriteLine($"Duration: {_length} seconds");
+        Console.WriteLine($"Total comments: {GetTotalComments()}");
         Console.WriteLine("----------Comments----------\n");
         foreach (Comment comment in _comments)
         {
             comment.Display();
         }
+    }
+
+    public int GetTotalComments()
+    {
+        return _comments.Count;
     }
 }
