@@ -9,9 +9,16 @@ public class SimpleGoal : Goal
         _isComplete = false;
     }
 
-    public override void RecordEvent()
+    public SimpleGoal(string name, string description, string points, bool isComplete)
+        : base(name, description, points)
+    {
+        _isComplete = isComplete;
+    }
+
+    public override int RecordEvent()
     {
         _isComplete = true;
+        return int.Parse(_points);
     }
 
     public override bool IsComplete()

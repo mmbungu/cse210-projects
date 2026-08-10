@@ -13,7 +13,17 @@ public abstract class Goal
         _points = points;
     }
 
-    public abstract void RecordEvent();
+    public string GetName()
+    {
+        return _shortName;
+    }
+
+    public string GetPoints()
+    {
+        return _points;
+    }
+
+    public abstract int RecordEvent();
 
     public abstract bool IsComplete();
 
